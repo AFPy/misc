@@ -9,7 +9,10 @@ host = "http://www.canalc2.tv/"
 
 @console_script
 def canalc2(args):
-    """Usage: %prog"""
+    """Usage: %prog
+
+    Scrap http://www.canalc2.tv/ with mimms
+    """
     doc = pq(url=event)
     for li in doc('ul.listeProgramme li').items():
         a = li('a')
